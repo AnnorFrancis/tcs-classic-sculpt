@@ -4,7 +4,7 @@ const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const intro=$('#intro-curtain');
 function closeIntro(){intro?.remove();try{sessionStorage.setItem('tcs-intro-seen','1');}catch{}}
 let introSeen=false;try{introSeen=sessionStorage.getItem('tcs-intro-seen')==='1';}catch{}
-if(reducedMotion||introSeen)closeIntro();else{intro?.classList.add('playing');$('#skip-intro')?.addEventListener('click',closeIntro);setTimeout(closeIntro,2100);}
+if(reducedMotion||introSeen)closeIntro();else{intro?.classList.add('playing');$('#skip-intro')?.addEventListener('click',closeIntro);setTimeout(closeIntro,1250);}
 let scrollQueued=false;
 function updateNavigation(){ $('.nav-shell').classList.toggle('compact',scrollY>65);scrollQueued=false;}
 addEventListener('scroll',()=>{if(!scrollQueued){scrollQueued=true;requestAnimationFrame(updateNavigation);}},{passive:true});updateNavigation();

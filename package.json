@@ -6,7 +6,8 @@
   "scripts": {
     "build": "node build.cjs",
     "dev": "node server.cjs",
-    "check": "node --check site.js && node --check data.js && node --check admin/admin.js"
+    "check": "node --check site.js && node --check data.js && node --check admin/admin.js",
+    "build:pages": "node build.cjs --pages"
   },
   "keywords": [],
   "author": "",

@@ -37,3 +37,11 @@ This is a fully interactive static prototype, not a production salon operating s
 - No verified Instagram profile was identified; no guessed social handle is used.
 
 The management demo uses a fictional staff role alongside Rita, whose head stylist/artist listing appears on Fresha. All clients, transactions and inventory are invented samples, explicitly identified in the UI.
+
+## Live demo
+
+Website: https://annorfrancis.github.io/tcs-classic-sculpt/
+
+Management: https://annorfrancis.github.io/tcs-classic-sculpt/admin/
+
+Run npm run build:pages after changes to refresh the tracked docs/ deployment. See QUALITY.md for measured checks and limits.
