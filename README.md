@@ -54,3 +54,12 @@ Run npm run build:pages after changes to refresh the tracked docs/ deployment. S
 - Management: larger type and controls; day/month calendar, artist columns, status colours, date navigation, empty-slot booking and appointment management.
 - Source files are edited directly. `experience.css` and `experience.js` provide the new public presentation; `admin/calendar.js` and `admin/upgrade.css` add management upgrades.
 - `ASSETS.md` records additional stock sources. `HANDOFF.md` tracks implementation and remaining verification.
+
+## Third edition (26 October 2026, finished by Claude Code)
+- Cinematic intro: the TCS monogram draws itself, then the plum curtain splits into the hero. Plays once per browser tab, has a Skip button and is skipped for reduced motion.
+- Home: four-photo hero slideshow with progress bars, a live "open now" glass card, a moving services ribbon, four category cards with their own slideshows, a signature menu of six glass price cards over salon photography, a two-row moving photo strip and a glass closing card.
+- Services: 11 categories, each with its own photo slideshow and glass caption beside its price list, plus search and category chips. Home cards link to `services.html#cat-N`.
+- Gallery: editorial masonry with nine more photographs and glass captions. About: glass number band and "The TCS way". Contact: live Google map and today's hours highlighted.
+- Every page: photographic page header with a slideshow, glass navigation with a scroll progress line, scroll reveals, 3D tilt on cards, and a full footer.
+- Studio: photo-and-glass overview banner (next client, this week's takings, closing time), a week of paid history and upcoming bookings (storage key `tcs-studio-demo-v2`), calendar columns that fit on phones, fewer "demo" labels outside checkout.
+- New files: `luxe.css`, `luxe.js`. Photographs added as `assets/lx-*.webp` (see `ASSETS.md`).

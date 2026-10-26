@@ -62,7 +62,8 @@ const results=$('#svc-results');
 if(results){let active='all';const search=$('#svc-search'),count=$('#svc-count');
   const list=services.filter(s=>/^\d+$/.test(s.id));
   $('#svc-chips').innerHTML=`<button data-cat="all" aria-pressed="true">All services</button>`+CATS.map((c,n)=>`<button data-cat="${n}" aria-pressed="false">${c[1]}</button>`).join('');
-  results.innerHTML=CATS.map((c,n)=>{const rows=list.filter(s=>s.category===c[0]).sort((a,b)=>a.price-b.price);const from=rows.length?Math.min(...rows.map(r=>r.price)):0;
+  // data.js keeps each Fresha menu category in `description` and folds `category` into Hair/Beauty/Wellness.
+  results.innerHTML=CATS.map((c,n)=>{const rows=list.filter(s=>s.description===c[0]).sort((a,b)=>a.price-b.price);const from=rows.length?Math.min(...rows.map(r=>r.price)):0;
     return `<section class="cat-block" id="cat-${n}" data-cat="${n}"><div class="cat-media tilt">${c[3].map((im,k)=>`<img ${k?`data-src="${src(im)}"`:`src="${src(im)}"`} alt="${escapeHTML(c[1])}" class="${k?'':'on'}" loading="lazy">`).join('')}<div class="cat-dots">${c[3].map((_,k)=>`<i class="${k?'':'on'}"></i>`).join('')}</div><div class="cat-glass"><small>${String(n+1).padStart(2,'0')} · ${rows.length} SERVICES</small><h2>${escapeHTML(c[1])}</h2><p>${escapeHTML(c[2])}</p></div></div>
     <div class="cat-list"><p class="eyebrow">STARTING FROM ${money(from).toUpperCase()}</p>${rows.map(s=>`<article class="svc-row" data-name="${escapeHTML((s.name+' '+c[1]).toLowerCase())}"><h3>${escapeHTML(s.name.trim())}</h3><div class="row-meta"><strong><small>from</small>${money(s.price)}</strong><span>${s.minutes} min</span></div><button data-service="${s.id}" aria-label="Book ${escapeHTML(s.name.trim())}">↗</button></article>`).join('')}</div></section>`;}).join('')+`<p class="svc-empty" hidden>No services match that search. Try “lash”, “braids” or “facial”.</p>`;
   $$('.cat-media').forEach((m,n)=>{rotator(m,'img',3400,n*400);tilt(m);});
@@ -71,8 +72,9 @@ if(results){let active='all';const search=$('#svc-search'),count=$('#svc-count')
     count.textContent=`${shown} ${shown===1?'service':'services'} to explore`;$('.svc-empty').hidden=shown>0;};
   search.addEventListener('input',apply);
   $('#svc-chips').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;active=b.dataset.cat;$$('#svc-chips button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply();$('.svc-tools').scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});});
-  const hash=location.hash.match(/^#cat-(\d+)$/);if(hash){active=hash[1];$$('#svc-chips button').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.cat===active)));}
-  apply();}
+  apply();
+  // Cards on the home page link to a category; the blocks render after the browser's own anchor jump.
+  if(/^#cat-\d+$/.test(location.hash))requestAnimationFrame(()=>document.querySelector(location.hash)?.scrollIntoView({block:'start'}));}
 
 // Scroll reveals with a gentle stagger.
 const rvTargets='.section-heading,.discovery-copy>*,.category-card,.sig-head>*,.sig-card,.strip-row,.location-story>img,.location-story>div>*,.cl-card,.lf-top>div,.pi-copy>*,.cat-media,.cat-list,.gallery-photo,.contact-card>*,.hours-panel,.num-card,.way-card,.faq details,.plum-story>div>*';
