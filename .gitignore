@@ -1,0 +1,8 @@
+node_modules/
+research/
+qa/
+dist/
+assets/*.jpg
+*.log
+
+.claude/

@@ -1,0 +1,22 @@
+{
+  "name": "tcs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.cjs",
+    "dev": "node server.cjs",
+    "check": "node --check site.js && node --check data.js && node --check admin/admin.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@axe-core/cli": "^4.14.0",
+    "lighthouse": "^13.5.0",
+    "sharp": "^0.35.5",
+    "vite": "^8.3.5"
+  },
+  "private": true
+}
