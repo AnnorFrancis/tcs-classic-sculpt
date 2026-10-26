@@ -45,3 +45,12 @@ Website: https://annorfrancis.github.io/tcs-classic-sculpt/
 Management: https://annorfrancis.github.io/tcs-classic-sculpt/admin/
 
 Run npm run build:pages after changes to refresh the tracked docs/ deployment. See QUALITY.md for measured checks and limits.
+
+## Multi-page upgrade (26 October 2026)
+- Home: controllable photograph slideshow, layered portrait composition, animated glass sculpture, plum/rose sections.
+- Services: 81 source-menu items, category filtering, search and demo booking. The shared data module also retains 10 original demo service IDs for existing records.
+- Gallery: filterable TCS portfolio, salon and separately labelled editorial inspiration.
+- About and Contact: standalone pages with standard navigation, hours, telephone, WhatsApp and map links.
+- Management: larger type and controls; day/month calendar, artist columns, status colours, date navigation, empty-slot booking and appointment management.
+- Source files are edited directly. `experience.css` and `experience.js` provide the new public presentation; `admin/calendar.js` and `admin/upgrade.css` add management upgrades.
+- `ASSETS.md` records additional stock sources. `HANDOFF.md` tracks implementation and remaining verification.
