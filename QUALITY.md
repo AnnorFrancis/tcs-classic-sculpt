@@ -39,3 +39,9 @@ Brief skippable monogram curtain, shrinking fixed glass navigation, editorial sa
 ## First live desktop audit
 
 Website: performance 87, accessibility 100, best practices 100. Management: 97 / 100 / 100. The first website result exposed the cost of the 2.1-second intro; the intro was shortened to 1.25 seconds and the font preloaded before retesting.
+
+## Final refinement results
+
+After shortening the curtain and preloading Montserrat: local desktop website scored 100 performance / 100 accessibility / 100 best practices. The deployed website scored 91 / 100 / 100; the deployed management demo scored 97 / 100 / 100. Live SEO remained 63 because indexing is deliberately disabled. Local and hosted measurements are distinct; network latency and cache state affect the hosted result.
+
+Deployment verified: both public URLs returned HTTP 200 and GitHub Pages completed successfully for code commit 9f460d3.
