@@ -63,3 +63,5 @@ Run npm run build:pages after changes to refresh the tracked docs/ deployment. S
 - Every page: photographic page header with a slideshow, glass navigation with a scroll progress line, scroll reveals, 3D tilt on cards, and a full footer.
 - Studio: photo-and-glass overview banner (next client, this week's takings, closing time), a week of paid history and upcoming bookings (storage key `tcs-studio-demo-v2`), calendar columns that fit on phones, fewer "demo" labels outside checkout.
 - New files: `luxe.css`, `luxe.js`. Photographs added as `assets/lx-*.webp` (see `ASSETS.md`).
+
+- 26 Oct, client photos: the second hero slide is now the salon's own treatment room (4K Google Maps photo, `assets/tcs-room*.webp`). A fifth slide shows her styling floor (the Fresha photo, enlarged and sharpened, `assets/tcs-floor*.webp`). The studio banner uses both. Studio text was enlarged so nothing reads below 12px.
