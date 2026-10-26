@@ -157,7 +157,7 @@ footer.lux-footer{display:block;padding:80px 7% 30px;background:radial-gradient(
 .lux-footer .brand{color:#fff}
 .lux-footer .brand-name small{color:#d9bfcb}
 .lux-footer .lf-brand p{color:#d9c6cf;max-width:300px;margin-top:22px;font-size:14px}
-.lux-footer h4{margin:6px 0 16px;font-size:11px;letter-spacing:2.5px;font-weight:600;color:#f2cfdc}
+.lux-footer .lf-h{margin:6px 0 16px;font-size:11px;letter-spacing:2.5px;font-weight:600;color:#f2cfdc}
 .lux-footer .lf-top>div{display:flex;flex-direction:column;gap:9px}
 .lux-footer .lf-top a{color:#f3e6ec;font-size:14px;width:fit-content;min-height:28px;display:inline-flex;align-items:center;transition:color .3s,transform .3s}
 .lux-footer .lf-top a:hover{color:#fff;transform:translateX(4px)}

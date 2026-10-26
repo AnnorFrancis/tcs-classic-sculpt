@@ -45,3 +45,20 @@ Website: performance 87, accessibility 100, best practices 100. Management: 97 /
 After shortening the curtain and preloading Montserrat: local desktop website scored 100 performance / 100 accessibility / 100 best practices. The deployed website scored 91 / 100 / 100; the deployed management demo scored 97 / 100 / 100. Live SEO remained 63 because indexing is deliberately disabled. Local and hosted measurements are distinct; network latency and cache state affect the hosted result.
 
 Deployment verified: both public URLs returned HTTP 200 and GitHub Pages completed successfully for code commit 9f460d3.
+
+## Third edition results (26 October 2026, Claude Code)
+
+Lighthouse 13.5.0, local static server, before the final image compression and accessibility fixes below.
+
+| Page | Phone performance | Desktop performance | Accessibility | Best practices |
+|---|---:|---:|---:|---:|
+| Home | 90 | 99 | 98 → 100 | 100 |
+| Services | 81 | 97 | 98 | 100 |
+| Gallery | 90 | 97 | 98 → 100 | 100 |
+| About | 90 | 99 | 98 | 100 |
+| Contact | 92 | 96 | 98 | 100 |
+| Studio | 88 | 99 | 100 | 100 |
+
+The 98s came from footer heading levels and gallery button labels; both were fixed and the rechecked pages score 100. The services hero photo was then compressed by half, which mainly helps the phone score.
+
+Checked in headless Chrome at 1440, 375 and 320 px: no sideways page scroll on any page. Intro, slideshows, reveals and compact navigation were captured frame by frame. End-to-end test passed: a booking made from a signature card on the home page appears in the studio's appointment list. Gallery filters, lightbox, service search, category links and count-up numbers were tested. `qa/data-test.mjs` and `qa/calendar-test.mjs` pass with the new seed data.
